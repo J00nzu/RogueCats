@@ -7,9 +7,10 @@ public class StaffScript : MonoBehaviour {
 	GameObject bullet;
 	private bool canShoot = true;
 
-	private float speed = 5f;
+	private float shotSpeed = 5f;
 	private float damage = 1f;
-	private bool bouncy = false;
+	private bool bouncy = true;
+	private int bounceTimes = 1;
 	private float shotRate = 1f;
 
 	// Use this for initialization
@@ -24,8 +25,8 @@ public class StaffScript : MonoBehaviour {
 
 	public void Shoot(){
 		if (canShoot) {
-			GameObject projectile = Instantiate(bullet, transform.position + transform.up, transform.rotation);
-			projectile.GetComponent<ProjectileScript>().SetStats(speed, damage, bouncy);
+			GameObject projectile = Instantiate(bullet, new Vector3(transform.position.x, transform.position.y, -1) + transform.up, transform.rotation);
+			projectile.GetComponent<ProjectileScript>().SetStats(shotSpeed, damage, bouncy, bounceTimes);
 
 			canShoot = false;
 			StartCoroutine(CoolDown());
@@ -38,7 +39,7 @@ public class StaffScript : MonoBehaviour {
 	}
 
 	public void SetStats(float speed, float damage, bool bouncy) {
-		this.speed = speed;
+		this.shotSpeed = speed;
 		this.damage = damage;
 		this.bouncy = bouncy;
 	}
