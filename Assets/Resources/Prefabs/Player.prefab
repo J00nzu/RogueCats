@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4017475419857368}
   - component: {fileID: 108245381391373974}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Directional light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36,7 +36,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4498792743498834}
   - component: {fileID: 212676344434561898}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: PlayerSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55,7 +55,7 @@ GameObject:
   - component: {fileID: 114039308148546982}
   - component: {fileID: 60654462573989820}
   - component: {fileID: 114998937655888548}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}

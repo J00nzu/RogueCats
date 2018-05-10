@@ -19,11 +19,11 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4917749319261844}
-  - component: {fileID: 61728988154422828}
   - component: {fileID: 114937852576478464}
   - component: {fileID: 108482511352003736}
   - component: {fileID: 50768244375401976}
-  m_Layer: 0
+  - component: {fileID: 58191204985561352}
+  m_Layer: 8
   m_Name: Bullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39,7 +39,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4356506935372308}
   - component: {fileID: 212275835002886398}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BulletSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -66,7 +66,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1267109174282834}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.0268747, y: -0.6545475, z: 0}
+  m_LocalPosition: {x: -3.750342, y: -2.6373277, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4356506935372308}
@@ -86,15 +86,15 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
+  m_Material: {fileID: 6200000, guid: 246788338b89e4076939ad8612cca820, type: 2}
+  m_Interpolate: 1
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
---- !u!61 &61728988154422828
-BoxCollider2D:
+--- !u!58 &58191204985561352
+CircleCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -106,18 +106,8 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.0625, y: 0.0625}
-    newSize: {x: 0.64, y: 0.64}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.0625, y: 0.0625}
-  m_EdgeRadius: 0
+  m_Radius: 0.1
 --- !u!108 &108482511352003736
 Light:
   m_ObjectHideFlags: 1
@@ -128,8 +118,8 @@ Light:
   serializedVersion: 8
   m_Type: 2
   m_Color: {r: 1, g: 0.46135902, b: 0.16911763, a: 1}
-  m_Intensity: 2
-  m_Range: 5
+  m_Intensity: 4
+  m_Range: 3
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
